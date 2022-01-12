@@ -38,7 +38,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <stdlib.h>
 #include <string.h>
 #include "SKP_Silk_SDK_API.h"
-
+#include <locale.h>
 /* Define codec specific settings */
 #define MAX_BYTES_PER_FRAME     250 // Equals peak bitrate of 100 kbps 
 #define MAX_INPUT_FRAMES        5
@@ -115,6 +115,7 @@ static void print_usage( char* argv[] ) {
 
 int main( int argc, char* argv[] )
 {
+    setlocale(LC_ALL, "");
     unsigned long tottime, starttime;
     double    filetime;
     size_t    counter;

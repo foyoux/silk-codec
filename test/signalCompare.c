@@ -37,6 +37,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <locale.h>
 
 #include "SKP_Silk_SigProc_FIX.h"
 
@@ -97,6 +98,7 @@ static void print_usage(char* argv[]) {
 
 int main(int argc, char* argv[])
 {
+    setlocale(LC_ALL, "");
     SKP_int   args, n, i, counterRef, counterTest;
     char      testInFileName[150], refInFileName[150];
     FILE      *refInFile, *testInFile;

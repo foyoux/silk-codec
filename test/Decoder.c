@@ -70,6 +70,8 @@ void swap_endian(
 
 #if (defined(_WIN32) || defined(_WINCE))
 #include <windows.h>	/* timer */
+#include <locale.h>
+
 #else    // Linux or Mac
 #include <sys/time.h>
 #endif
@@ -114,6 +116,7 @@ static void print_usage(char* argv[]) {
 
 int main( int argc, char* argv[] )
 {
+    setlocale(LC_ALL, "");
     unsigned long tottime, starttime;
     double    filetime;
     size_t    counter;
