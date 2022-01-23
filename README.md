@@ -52,3 +52,4 @@
    ```
    1. 详细信息见命令行帮助信息
 
+https://user-images.githubusercontent.com/35125624/150665992-8c7ef940-71bb-42c5-b7a1-7e0559ae539c.mp4
